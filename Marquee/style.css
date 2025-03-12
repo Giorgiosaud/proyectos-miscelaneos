@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+}
+.marquee{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    max-width: 1536px;
+    margin: auto;   
+    position: relative;
+    height: 100px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 10%, 
+        rgba(0,0,0,1) 90% ,
+        rgba(0,0,0,0) 100%);
+}
+.item{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    border-radius: 6px;
+    position: absolute;
+    left: 100%;
+    animation-name: scrollLeft;
+    animation-timing-function: ease-out;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    
+}
+.item:nth-child(even){
+    background-color: blue;;
+}
+.item-1{
+    animation-delay: calc(15s / 8 * (8 - 1) * -1);
+}
+.item-2{
+    animation-delay: calc(15s / 8 * (8 - 2) * -1);
+}
+.item-3{
+    animation-delay: calc(15s / 8 * (8 - 3) * -1);
+
+}
+.item-4{
+    animation-delay: calc(15s / 8 * (8 - 4) * -1);
+
+}
+.item-5{
+    animation-delay: calc(15s / 8 * (8 - 5) * -1);
+
+}
+.item-6{
+    animation-delay: calc(15s / 8 * (8 - 6) * -1);
+
+}
+.item-7{
+    animation-delay: calc(15s / 8 * (8 - 7) * -1);
+
+}
+.item-8{
+    animation-delay: calc(15s / 8 * (8 - 8) * -1);
+
+}
+
+@keyframes scrollLeft{
+    to{
+        left:-100%
+    }
+
+}
